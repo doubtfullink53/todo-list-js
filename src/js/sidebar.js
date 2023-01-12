@@ -26,20 +26,14 @@ export default function sideBar() {
                   </li>
                   
                   <li>
-                      <a href="#" class="nav-link px-sm-0 px-2 glyphicon text-white">
-                          <i class="fa-solid fa-calendar-week"></i><span class="ms-1 d-none d-sm-inline">Week</span></a>
+                      <a href="#" class="nav-link px-sm-0 px-2  text-white">
+                          <i class="fa-solid fa-calendar-week glyphicon"></i><span class="ms-1 d-none d-sm-inline">Week</span></a>
                   </li>
                  
                  
-                  <li>
-                      <a href="#" class="nav-link px-sm-0 px-2">
-                          <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">Products</span></a>
-                  </li>
-                  <li>
-                      <a href="#" class="nav-link px-sm-0 px-2">
-                          <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">Customers</span> </a>
-                  </li>
-                  <h3 class="ms-1 d-none d-sm-inline">Projects</h3>
+                  
+                 
+                  <h3 class="ms-1 pt-5 d-none d-sm-inline">Projects</h3>
                   <li>
                       <a href="#" class="nav-link px-sm-0 px-2">
                           <i class="fas fa-plus glyphicon text-white"></i><span class="ms-1 d-none d-sm-inline">Add Project</span></a>

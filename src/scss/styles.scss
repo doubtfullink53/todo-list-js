@@ -16,11 +16,11 @@ hr { display: block; height: 1px;
 
 @media screen and (max-width: 299px) {
     .glyphicon {
-        font-size: 1em;
+        font-size: 3em;
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 400px) {
+@media screen and (min-width: 200px) and (max-width: 600px) {
     .glyphicon {
         font-size: 3em;
     }
