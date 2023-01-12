@@ -1,1 +1,33 @@
 @import "~bootstrap/scss/bootstrap";
+
+
+
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid rgb(212, 16, 16);
+    margin: 1em 0; padding: 0; }
+
+@media (min-width: 576px) {
+    .h-sm-100 {
+        height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 299px) {
+    .glyphicon {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    .glyphicon {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .glyphicon {
+        font-size: 1.5em;
+    }
+}
