@@ -1,7 +1,7 @@
 import todo from "./todo";
 import { project } from "./todo";
 import changeActiveProject  from "./changeActiveProject";
-// import addProject from "./addProject";
+import addProject from "./addProject";
 import { mainModal } from "./addProjectModal";
 
 
@@ -33,7 +33,7 @@ export default function main() {
                     </ul>
                     
               </div>`;
-  // addProject();
+  addProject();
 
  
 
