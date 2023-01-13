@@ -9,10 +9,10 @@ export default function navBar() {
     
     // navbar.appendChild(navbar);
     const navbar = document.createElement("nav");
-  navbar.setAttribute("class", "text-lg-center")
+    
 
-    navbar.innerHTML = ` \
-     <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary  ">
+    navbar.innerHTML = ` 
+     <nav class=" bg-secondary text-center text-white fs-1 ">
      <div class="container ">
       <a class="navbar-brand " href="#">To Do List</a>
      

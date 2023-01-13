@@ -8,25 +8,27 @@ export default function addProject (){
 
    const projects = []
 
-
+console.log(projects)
      
     function displayProjects(){
-        // for (let i = 0; i < projects.length; i++) {
-        //     project.innerHTML += `
-        //     <button class="btn btn-outline-primary " type="button">
-        //     <h3>${projects[i]} </h3>
-        //     </button>
-        //     `
-        //     console.log(i)
-        //   }
+        for (let i = 0; i < projects.length; i++) {
+            project.innerHTML += `
+            <button class="btn btn-outline-secondary btn-lg btn-block" type="button">
+            <h3>${projects[i]} </h3>
+            </button>
+            `
+            console.log(i)
+          }
      }
      
 
      saveBtn.addEventListener('click', ()=>{
       const projectText = document.getElementById("project-text");
-      const value1 = projectText?.value || '';
+      const value1 = projectText ?.value || '';
 
+      projects.push(value1)
       console.log(value1)
+      console.log("clicked save button")
         project.innerHTML = "";
         // projects.push("Learn React")
         displayProjects();

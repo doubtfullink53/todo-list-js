@@ -14,24 +14,42 @@ export default function main() {
     
     main.innerHTML = `
             ${mainModal}
-              <div class="col p-4">
+              <div class="col-lg-5  p-5 ">
                   <h3 class="text-center">Inbox</h3>
-                    
+                  <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Walk the Dog
+                      </label>
+                    </div>
+                  
+                  </li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">A fourth item</li>
+                  <li class="list-group-item">And a fifth one</li>
+                </ul>
                   <li class="list-unstyled">
                       <a href="#" class="nav-link  px-sm-0 px-2 text-center">
                       <i class="fas fa-plus glyphicon  fa-5x"></i><span class="ms-1 d-none d-sm-inline "></span></a>
                   </li>
                   
                   <hr />
+
                   <h3 class="text-center">Projects</h3>
+                  <div class="row ">
+                  <div class="col-md-12" >
                     <ul class="list-group  ">
                       <li class="list-group-item ">
-                        <div class="d-grid gap-2 " id="active-project">
+                        <div class="d-grid gap-4 " id="active-project">
                          
                         </div>
                       </li>
                     </ul>
-                    
+                    </div>
+                  </div>
               </div>`;
   addProject();
 

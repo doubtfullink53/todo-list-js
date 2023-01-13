@@ -52,7 +52,7 @@ export default function sideBar() {
           </div>
       </div>
       <div class="col d-flex flex-column h-sm-100">
-          <main class="row overflow-auto" id="main-content">
+          <main class="row overflow-auto justify-content-center" id="main-content">
              
           </main>
           <footer class="row bg-light py-4 mt-auto">
