@@ -12,7 +12,7 @@ export default function navBar() {
   navbar.setAttribute("class", "text-lg-center")
 
     navbar.innerHTML = ` \
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark  ">
+     <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary  ">
      <div class="container ">
       <a class="navbar-brand " href="#">To Do List</a>
      

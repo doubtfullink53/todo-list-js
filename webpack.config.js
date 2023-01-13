@@ -7,7 +7,8 @@ module.exports = {
     home: './src/js/todo.js',
     navbar: './src/js/navbar.js',
     sidebar: './src/js/sidebar.js',
-    main: './src/js/main.js'
+    main: './src/js/main.js',
+    todo: './src/js/todo.js'
   },
   output: {
     filename: '[name].bundle.js',

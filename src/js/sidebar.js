@@ -7,8 +7,11 @@ export default function sideBar() {
   // console.log("testing");
   const sidebar = document.createElement("header");
 
-  sidebar.innerHTML = `<div class="container-fluid overflow-hidden">
-  <div class="row vh-100 overflow-auto">
+  sidebar.innerHTML = `
+
+  
+  <div class="container-fluid overflow-hidden">
+    <div class="row vh-100 overflow-auto">
       <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-secondary d-flex sticky-top">
           <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-0 text-white">
               <a href="/" class="d-flex align-items-center pb-sm-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -35,10 +38,16 @@ export default function sideBar() {
                  
                   <h3 class="ms-1 pt-5 d-none d-sm-inline">Projects</h3>
                   <li>
-                      <a href="#" class="nav-link px-sm-0 px-2">
-                          <i class="fas fa-plus glyphicon text-white"></i><span class="ms-1 d-none d-sm-inline">Add Project</span></a>
+                      
+
+                          <!-- Button trigger modal -->
+                          <button type="button" class="nav-link px-sm-0 px-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          <i class="fas fa-plus glyphicon text-white"></i><span class="ms-1 d-none d-sm-inline text-white">Add Project</span></button>
+                          </button>  
+                          
                   </li>
               </ul>
+              
               
           </div>
       </div>
