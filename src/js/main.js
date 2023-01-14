@@ -1,8 +1,10 @@
-import todo from "./todo";
-import { project } from "./todo";
+
+
 import changeActiveProject  from "./changeActiveProject";
 import addProject from "./addProject";
-import { mainModal } from "./addProjectModal";
+import  {projectModal} from "./addProjectModal";
+import addToDo from "./addTodo";
+import { toDoModal} from "./addTodoModal";
 
 
 export default function main() {
@@ -13,27 +15,22 @@ export default function main() {
     
     
     main.innerHTML = `
-            ${mainModal}
-              <div class="col-lg-5  p-5 ">
-                  <h3 class="text-center">Inbox</h3>
-                  <ul class="list-group">
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Walk the Dog
-                      </label>
-                    </div>
+            ${projectModal}
+            ${toDoModal}
+              <div class="col-lg-5  p-4 ">
+                  <h3 class="text-center p-0">Inbox</h3>
+                  <ul class="list-group " id="todo-add">
                   
-                  </li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
-                  <li class="list-group-item">A fourth item</li>
-                  <li class="list-group-item">And a fifth one</li>
+                 
+
                 </ul>
-                  <li class="list-unstyled">
-                      <a href="#" class="nav-link  px-sm-0 px-2 text-center">
-                      <i class="fas fa-plus glyphicon  fa-5x"></i><span class="ms-1 d-none d-sm-inline "></span></a>
+                  <li class="list-unstyled ">
+                    <div class="d-grid gap-2 col-lg-1  pt-4 mx-auto">
+                      <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#todo">
+                          <i class="fas fa-plus glyphicon "></i></button>
+                          </button>  
+                    </div>
                   </li>
                   
                   <hr />
@@ -52,6 +49,7 @@ export default function main() {
                   </div>
               </div>`;
   addProject();
+  addToDo();
 
  
 

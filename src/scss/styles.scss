@@ -3,9 +3,6 @@
 
 
 
-hr { display: block; height: 1px;
-    border: 0; border-top: 1px solid rgb(212, 16, 16);
-    margin: 1em 0; padding: 0; }
 
 @media (min-width: 576px) {
     .h-sm-100 {
@@ -31,3 +28,40 @@ hr { display: block; height: 1px;
         font-size: 1.5em;
     }
 }
+
+.form-check-input {
+    margin-right: 10px; /* add a margin to the right of the check form */
+ }
+
+ .form-check-label {
+    font-size: 2vw;
+ }
+
+
+ .form-check-label {
+    font-size: calc(1.5vw + 1vh);
+ }
+
+ .form-check-label {
+    word-wrap: break-word;
+ }
+
+ .form-check {
+    display: flex;
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally */
+}
+
+/* set the default size for the checkbox button */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+ }
+ 
+ /* adjust the size on screens smaller than 768px */
+ @media only screen and (max-width: 768px) {
+    .form-check-input {
+       width: 30px;
+       height: 30px;
+    }
+ }

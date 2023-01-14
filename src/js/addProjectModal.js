@@ -1,6 +1,6 @@
 
 
-    export  const mainModal = `
+    export   const projectModal = `
    
 
                     <!-- Modal -->

@@ -17,7 +17,7 @@ console.log(projects)
             <h3>${projects[i]} </h3>
             </button>
             `
-            console.log(i)
+            
           }
      }
      

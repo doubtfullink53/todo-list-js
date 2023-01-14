@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
 // import _ from 'lodash';
-import printMe from "./todo.js";
+
 import navBar  from "./navbar";
 import sideBar from "./sidebar";
 import main from "./main";
