@@ -1,6 +1,35 @@
 import changeActiveProject from "./changeActiveProject";
 
 
+export let toDoArray = [{
+  id: 1,
+  name: "walk the dog",
+  date: "2022-01-18",
+  project: "Inbox",
+},
+{
+id: 2,
+name: "Exercise",
+date: "2022-01-18",
+project: "Inbox",
+
+},
+{
+  id: 3,
+  name: "Wash my clothes",
+  date: "2022-01-18",
+  project: "Today",
+
+  },
+  {
+      id: 4,
+      name: "Wash my clothes",
+      date: "2022-01-18",
+      project: "Week",
+    
+  }
+];
+
 
 
 export default function todos() {
@@ -19,65 +48,39 @@ export default function todos() {
   let todoText = document.getElementById("todo-text");
   let projectText = document.getElementById("project-text");
 
-  let toDoArray = [{
-    id: 1,
-    name: "walk the dog",
-    date: "2022-01-18",
-    project: "Inbox",
-  },
-  {
-  id: 2,
-  name: "Exercise",
-  date: "2022-01-18",
-  project: "Inbox",
 
-  },
-  {
-    id: 3,
-    name: "Wash my clothes",
-    date: "2022-01-18",
-    project: "Today",
-  
-    },
-    {
-        id: 4,
-        name: "Wash my clothes",
-        date: "2022-01-18",
-        project: "Week",
-      
-    }
-];
 
-function deleteTodo(id) {
-    toDoArray = toDoArray.filter(todo => todo.id !== id);
-    // remove the key from the eventListeners object
-    let deleteBtn = document.getElementById("delete-todo-" + id);
-    deleteBtn.removeEventListener("click", deleteTodo);
-    displayTodos();
+function deleteTodo(todo) {
+  console.log(todo)
+
+  toDoArray = toDoArray.filter(object => {
+    return object.id !== todo;
+  });
+  console.log(toDoArray)
+  displayTodos();
 }
+window.deleteTodo = deleteTodo;
 
-let eventListeners = {}
-function displayTodos(project) {
-    todoAdd.innerHTML = "";
-    toDoArray.forEach(todo => {
-        if (todo.project === project || (!project && todo.project !== "")  || project === "Inbox" && toDoArray.project !== "")  {
-            todoAdd.innerHTML += `
-              <li class="list-group-item ">
-                  <div class="form-check d-flex justify-content-evenly">
-                      <input class="form-check-input align-middle" type="checkbox" value="" id="checkbox-${todo.id}">
-                      <label class="form-check-label" for="checkbox-${todo.id} " style="width: 75%;">${todo.name}</label>
-                      <input class="" type="date" value="${todo.date}">
-                      <button class="btn btn-danger" id="delete-todo-${todo.id}">x</button>
-                  </div>
-              </li>
-              `;
-             
-            let deleteBtn = document.getElementById("delete-todo-" + todo.id);
-            deleteBtn.addEventListener("click", () => deleteTodo(todo.id));
-        }
-    });
+function displayTodos(project, todo) {
+  todoAdd.innerHTML = "";
+  toDoArray.forEach((todo) => {
+      if (todo.project === project || (!project && todo.project !== "")  || project === "Inbox" && toDoArray.project !== "")  {
+          todoAdd.innerHTML += `
+            <li class="list-group-item ">
+                <div class="form-check d-flex justify-content-evenly">
+                    <input class="form-check-input align-middle" type="checkbox" value="" id="checkbox-${todo.id}">
+                    <label class="form-check-label" for="checkbox-${todo.id} " style="width: 75%;">${todo.name}</label>
+                    <input class="" type="date" value="${todo.date}">
+                    <button class="btn btn-danger" id="delete-todo-${todo.id}" onclick="deleteTodo(${todo.id})">x</button>
+                </div>
+            </li>
+            `;
+           
+          // let deleteBtn = document.getElementById("delete-todo-" + todo.id);
+          // deleteBtn.addEventListener("click", () => deleteTodo(todo));
+      }
+  });
 }
-
 
 
 
@@ -141,9 +144,7 @@ projectAdd.addEventListener("click", (e) => {
 
   displayTodos();
 displayProjects();
-window.onload = function() {
-    changeActiveProject();
-  }
+
   
 
 

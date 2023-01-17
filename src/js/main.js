@@ -13,13 +13,13 @@ export default function main() {
 
     const main = document.getElementById("main-content");
   
-    
+   
     
     main.innerHTML = `
             ${projectModal}
             ${toDoModal}
               <div class="col-lg-5  p-4 ">
-                  <h3 class="text-center p-0" id="project-title">placeholder</h3>
+                  <h3 class="text-center p-0" id="project-title">Inbox</h3>
                   <ul class="list-group " id="todo-add">
                   
                  
