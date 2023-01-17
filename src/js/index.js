@@ -15,7 +15,8 @@ import '@fortawesome/fontawesome-free/js/brands'
 import navBar  from "./navbar";
 import sideBar from "./sidebar";
 import main from "./main";
-import addProject from "./addProject";
+
+
 // import main from "./main";
 
 // export default function component() {
@@ -31,7 +32,6 @@ import addProject from "./addProject";
 //   return element;
 // }
 
-  
 
 
 // document.body.appendChild(component());
@@ -39,4 +39,3 @@ document.body.appendChild(navBar());
 document.body.appendChild(sideBar());
 // document.body.appendChild(main());
 main();
-

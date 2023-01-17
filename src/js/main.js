@@ -1,10 +1,11 @@
 
 
 import changeActiveProject  from "./changeActiveProject";
-import addProject from "./addProject";
-import  {projectModal} from "./addProjectModal";
-import addToDo from "./addTodo";
-import { toDoModal} from "./addTodoModal";
+
+import  {projectModal} from "./projectModal";
+import { toDoModal } from "./todoModal";
+import todos from "./todos";
+
 
 
 export default function main() {
@@ -18,7 +19,7 @@ export default function main() {
             ${projectModal}
             ${toDoModal}
               <div class="col-lg-5  p-4 ">
-                  <h3 class="text-center p-0">Inbox</h3>
+                  <h3 class="text-center p-0" id="project-title">placeholder</h3>
                   <ul class="list-group " id="todo-add">
                   
                  
@@ -27,7 +28,7 @@ export default function main() {
                   <li class="list-unstyled ">
                     <div class="d-grid gap-2 col-lg-1  pt-4 mx-auto">
                       <!-- Button trigger modal -->
-                          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#todo">
+                          <button type="button" class="btn btn-outline-primary" id="add-todo-btn" data-bs-toggle="modal" data-bs-target="#todo">
                           <i class="fas fa-plus glyphicon "></i></button>
                           </button>  
                     </div>
@@ -36,31 +37,31 @@ export default function main() {
                   <hr />
 
                   <h3 class="text-center">Projects</h3>
-                  <div class="row ">
+                <div class="row ">
                   <div class="col-md-12" >
                     <ul class="list-group  ">
                       <li class="list-group-item ">
-                        <div class="d-grid gap-4 " id="active-project">
+                      
+                        <div class="d-grid gap-4 " id="project-add">
                          
                         </div>
                       </li>
+                      
                     </ul>
+                    <div class="d-grid gap-2 col-lg-1  pt-4 mx-auto">
+                      <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project">
+                          <i class="fas fa-plus glyphicon "></i></button>
+                          </button>  
+                    </div>
                     </div>
                   </div>
               </div>`;
-  addProject();
-  addToDo();
-
- 
-
+             
+              
+  todos();
+  
     return main;
   }
   
 
-
-//   <button class="btn btn-outline-primary active" type="button">
-//   <h3>Learn React </h3>
-// </button>
-// <button class="btn btn-outline-primary" type="button">
-//   <h3>Exercise</h3>
-// </button>
