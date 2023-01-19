@@ -4,30 +4,23 @@ export let toDoArray = [
   {
     id: 1,
     name: "",
-    date: "2022-01-18",
+    date: "",
     project: "Inbox",
     checked: false,
   },
   {
-    id: 2,
-    name: "Exercise",
-    date: "2022-01-18",
-    project: "Day",
-    checked: false,
-  },
-  {
     id: 3,
-    name: "Wash my clothes",
-    date: "2022-01-18",
+    name: "",
+    date: "",
     project: "Today",
     checked: false,
   },
   {
     id: 4,
-    name: "Wash my clothes",
-    date: "2022-01-18",
-    project: "Month",
-    checked: true,
+    name: "",
+    date: "",
+    project: "Week",
+    checked: false,
   },
 ];
 
@@ -73,6 +66,7 @@ export default function todos() {
     toDoArray[index].date = date.value;
     localStorage.setItem("toDoArray", JSON.stringify(toDoArray));
     console.log(toDoArray[index])
+    displayTodos();
    
   }
   window.editDate = editDate;
@@ -103,7 +97,7 @@ export default function todos() {
                     <input class="form-check-input align-middle p-3" type="checkbox" value="" id="checkbox-${
                       todo.id }" ${todo.checked ? "checked" : "" }  onclick="editCheckMark(${todo.id})">
                     <input class="form-control" type="text" value="${
-                      todo.name}" id="todo-text-${todo.id}" >
+                      todo.name}" id="todo-text-${todo.id}" onchange="editTodo(${todo.id})" >
                     <input class="ms-1" type="date" value="${todo.date}" id="date-${
                       todo.id}" onchange="editDate(${todo.id})">
                     <div class="ps-3">
@@ -114,25 +108,11 @@ export default function todos() {
             </li>
             `;
 
-        let todoText = document.getElementById("todo-text-" + todo.id);
-        todoText.addEventListener("blur", () => {
-          editTodo(todo.id);
-        });
-
-
-        // let date = document.getElementById("date-" + todo.id);
-        // date.addEventListener("change", () => {
-        //   todo.value = date.value;
-        //  console.log(toDoArray)
+        // let todoText = document.getElementById("todo-text-" + todo.id);
+        // todoText.addEventListener("blur", () => {
+        //   editTodo(todo.id);
         // });
 
-
-        // let checkbox = document.getElementById("checkbox-" + todo.id);
-        // checkbox.addEventListener("change", () => {
-        //   todo.checked = checkbox.checked;
-        //   console.log(toDoArray);
-          
-        // });
       }
     });
   }
@@ -155,9 +135,10 @@ export default function todos() {
     let todoText = document.getElementById("todo-text-" + id);
     let index = toDoArray.findIndex((todo) => todo.id === id);
     toDoArray[index].name = todoText.value;
-    displayTodos();
+    
     localStorage.setItem("toDoArray", JSON.stringify(toDoArray));
     console.log(toDoArray);
+    displayTodos();
   }
 
   window.editTodo = editTodo;
