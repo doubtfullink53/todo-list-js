@@ -19,7 +19,7 @@ export default function main() {
             ${projectModal}
             ${toDoModal}
               <div class="col-lg-5  p-4 ">
-                  <h3 class="text-center p-0" id="project-title">Inbox</h3>
+                  <h3 class="text-center p-0" id="project-title"></h3>
                   <ul class="list-group " id="todo-add">
                   
                  
@@ -42,7 +42,7 @@ export default function main() {
                     <ul class="list-group  ">
                       <li class="list-group-item ">
                       
-                        <div class="d-grid gap-4 " id="project-add">
+                        <div class="d-grid gap-0 " id="project-add">
                          
                         </div>
                       </li>
